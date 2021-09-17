@@ -13,15 +13,18 @@ public class Main {
         eleitor = scan.nextInt();
         scan.nextLine();
         
-        if( eleitor < 16 ){
+        if( eleitor < 16 || eleitor == 17 ){
             System.out.println(eleitor);
             System.out.println("Você ainda não é um eleitor.");
         }else if( eleitor >= 18 && eleitor < 65 ){
             System.out.println(eleitor);
             System.out.println("Você é obrigado.");
-        }else if( eleitor == 16 || eleitor == 18 || eleitor > 65 ){
-            System.out.println(eleitor);
-            System.out.println("Você é facutativo");
+        }else if( eleitor == 16){
+            System.out.println(eleitor + " Você é facutativo.");
+        }else if( eleitor == 18 ){
+            System.out.println(eleitor + " Você é facutativo.");
+        }else if( eleitor > 65 ){
+            System.out.println(eleitor + " Você é facutativo.");
         }
         
     }
